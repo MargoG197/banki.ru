@@ -1,4 +1,5 @@
 import * as React from 'react';
+/////// импортируем компоненты  material ui
 import {
   Unstable_NumberInput as BaseNumberInput,
   numberInputClasses,
@@ -23,7 +24,7 @@ const CustomNumberInput = React.forwardRef(function CustomNumberInput(props, ref
 
 
 export default function NumberInputFilter({ filter, onChange }) {
-  
+  /////// создала handleInput чтобы изменять состояние переданное в пропсах
 const handleInput = (e) => {
   onChange(e.target.value)
 }

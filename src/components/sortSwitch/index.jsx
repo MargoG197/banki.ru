@@ -1,4 +1,5 @@
 import * as React from 'react';
+/////// импортируем компоненты  material ui
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 import FormGroup from '@mui/material/FormGroup';
@@ -11,7 +12,8 @@ export default function SortSwitch({sort, onChange}) {
     jason: false,
     antoine: true,
   });
-
+  
+////// редактируем оригинальный handleChange и добавляем туда свое изменение своего состояния  onChange(event.target.checked)
   const handleChange = (event) => {
     setState({
       ...state,

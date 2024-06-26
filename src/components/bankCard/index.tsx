@@ -1,4 +1,5 @@
 import * as React from 'react';
+/////// импортируем компоненты  material ui
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -7,7 +8,8 @@ import CardMedia from '@mui/material/CardMedia';
 import CardHeader from '@mui/material/CardHeader';
 
 
-
+/////// передаем в пропсы объект предложения банка и используем его данные для создания карточки предложения
+/////// дополнительно задала стили компонентов, чтобы не придумывать классы прямо в самих компонентах
 function BankCard({offer}) {
   return (
     <Card variant="outlined" sx={{ margin: "10px", marginLeft: "0px", padding: "10px"}}>
@@ -38,7 +40,8 @@ function BankCard({offer}) {
 )
 };
 
-
+/////// создаю сортировку и фильтр и потом передаю оставшиеся(отсортированные) объекты в функцию
+///////выше, чтобы получить карточки предложений
 export default function BankCards({products, sort, filtered}) {
   return (
     <Box sx={{ width: "275px" }}>
@@ -53,8 +56,6 @@ export default function BankCards({products, sort, filtered}) {
       }).map((product, i) => {
           return <BankCard key={i} offer={product}/>
         })
-      
-      
       }
     </Box>
 

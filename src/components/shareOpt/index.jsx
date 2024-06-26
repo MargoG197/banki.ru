@@ -1,4 +1,5 @@
 import * as React from 'react';
+/////// импортируем компоненты  material ui
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
@@ -6,6 +7,7 @@ import Typography from '@mui/material/Typography';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 export default function ShareWithFriends({ toSort, filter }) {
+  ///// создаем ссылку, для передачи параметров посредством ссылки, чтобы другие люди смогли видеть выбор клиента
   let link =`http://localhost:8081/?filter=${filter}&sort=${toSort ? "true" : "false"}`
   return (
     <div>
