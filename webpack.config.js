@@ -4,7 +4,7 @@ const path = require('path')
    
 module.exports = {
   mode: 'development',
-  entry: './src/js/main.tsx',
+  entry: './src/js/main.jsx',
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: "/dist/",
