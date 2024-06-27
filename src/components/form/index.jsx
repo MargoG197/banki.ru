@@ -1,21 +1,25 @@
-import React, { useState } from "react";
-import BankCards from "../bankCard/index.tsx";
+import * as React from 'react'
+import { useState} from 'react'
+import BankCards from "../bankCard/index.jsx";
 import NumberInputFilter from "../input/index.jsx";
-import components from "../database/index.tsx";
+import { components } from "../database/index.js";
 import SortSwitch from "../sortSwitch/index.jsx";
- import ShareWithFriends from "../shareOpt/index.jsx";
+import ShareWithFriends from "../shareOpt/index.jsx";
+
 
 export default function BankForm() {
-  ///////////////////////// ищем переданные через window.location.search параметры поиска,е сли они переданы
+  ///////////////////////// ищем переданные через window.location.search параметры поиска, если они переданы
   ///////// и заносим эти параметры в объект из которого будем их доставать по мере необходимости
   const parametersObj = {};
+  
+ 
   if (window.location.search !="") {
-    const str = window.location.search;
-     const params = ["sort", "filter"];
+  const str = window.location.search;
+  const params = ["sort", "filter"];
   let regexp;
 for (let i = 0; i < params.length; i++){
-    regexp = `[\\?&]${params[i]}=([^&#]*)`;
-       parametersObj[params[i]] = str.match(regexp)[1]
+       regexp = `[\\?&]${params[i]}=([^&#]*)`;
+  parametersObj[params[i]] = str.match(regexp)[1]
     }
   }
   ///////////////////////// используем стейт, чтобы отследить состояние, плюс если передавались параметры  в window.location.search

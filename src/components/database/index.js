@@ -1,5 +1,5 @@
 
-const components = {
+export const components = {
 	"filter": {
 		"amount": null
 	},
@@ -26,4 +26,3 @@ const components = {
 	}]
 };
 
-export default components;

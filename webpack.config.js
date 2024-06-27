@@ -21,7 +21,7 @@ module.exports = {
     module:{
         rules:[   //загрузчик для jsx
             {
-                test: /\.(tsx|jsx|js)?$/, // определяем тип файлов
+                test: /\.(tsx|jsx|js|ts)?$/, // определяем тип файлов
                 exclude: /(node_modules)/,  // исключаем из обработки папку node_modules
                 loader: "babel-loader",   // определяем загрузчик
                 options:{
