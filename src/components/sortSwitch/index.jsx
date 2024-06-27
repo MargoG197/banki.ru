@@ -28,7 +28,7 @@ export default function SortSwitch({sort, onChange}) {
       <FormGroup>
         <FormControlLabel
           control={
-            <Switch checked={state.jason} onChange={handleChange} name="jason" />
+            <Switch checked={sort == 'true' ? state.gilad : state.jason} onChange={handleChange} name="jason" />
           }
           label="Сортировать по максимальной сумме"
         />

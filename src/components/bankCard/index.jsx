@@ -46,7 +46,7 @@ export default function BankCards({products, sort, filtered}) {
   return (
     <Box sx={{ width: "275px" }}>
       {products.sort((a, b) => {
-        if (sort == true) {
+        if (sort == 'true') {
           return b.amount - a.amount
         } else {
           return a.amount - b.amount

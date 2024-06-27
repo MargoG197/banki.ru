@@ -30,7 +30,7 @@ const handleInput = (e) => {
 }
 
   return (
-    <CustomNumberInput placeholder="Сумма кредита" sx={{ width: "255px" }} onInput={handleInput} />
+    <CustomNumberInput placeholder="Сумма кредита" sx={{ width: "255px" }} onInput={handleInput} defaultValue={filter? filter : ""} />
   );
 }
 
